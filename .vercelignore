@@ -1,0 +1,9 @@
+# Keep the long-lived server entrypoint out of Vercel deployments.
+# Vercel detects src/server.ts as the "root entrypoint" and deploys it as the
+# catch-all "index" function, which (a) ignores api/agent.ts and its
+# includeFiles (so the circuits are missing at runtime -> INVALID_TASK on
+# every proof), and (b) breaks the /agent rewrite. Excluding it forces
+# Vercel to deploy api/agent.ts as the serverless function with the
+# circuits bundled. src/server.ts is still in the repo for `npm start`
+# (long-lived hosting) and is only hidden from Vercel.
+src/server.ts
