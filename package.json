@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "circomlibjs": "0.1.7",
+    "snarkjs": "0.7.6"
+  },
+  "description": "HTTPS agent endpoint for the zkVerify Agent Games Proof Gatekeeper event. Verifies HMAC-signed task envelopes, makes a deterministic APPROVE/REJECT decision, generates a real Groth16 proof with snarkjs against the official gatekeeper circuit, optionally submits it to zkVerify via Kurier, and returns a signed response.",
+  "devDependencies": {
+    "@types/node": "22",
+    "typescript": "5.6.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "name": "0xrnld-gatekeeper",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc && node dist/server.js",
+    "start": "node dist/server.js",
+    "test": "tsc && node dist/test/harness.js",
+    "fetch-circuits": "node scripts/fetch-circuits.js"
+  },
+  "version": "1.0.0"
+}
