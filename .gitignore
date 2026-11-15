@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+data/
+.vercel
+.scratch/
+*.log
+# Circuit proving artifacts are binary platform files published by
+# Agent Games; they are NOT committed (same policy as the official docs).
+# Download them with `npm run fetch-circuits`. The verification key
+# (circuits/verification_key.json) IS committed for local proof checks.
+circuits/gatekeeper.wasm
+circuits/gatekeeper_final.zkey
