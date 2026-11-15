@@ -16,8 +16,8 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "dev": "tsc && node dist/server.js",
-    "start": "node dist/server.js",
+    "dev": "tsc && node dist/src/server.js",
+    "start": "node dist/src/server.js",
     "test": "tsc && node dist/test/harness.js",
     "fetch-circuits": "node scripts/fetch-circuits.js"
   },
